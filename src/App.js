@@ -2,9 +2,9 @@ import Calculadora from "./Components/Calculadora";
 
 function App() {
   const propiedades = {
-    operacion: "+",
-    numero1: 1,
-    numero2: 2,
+    operacion: "-",
+    numero1: 3,
+    numero2: 4,
   };
   return (
     <div>
