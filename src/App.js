@@ -1,23 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import Calculadora from "./Components/Calculadora";
 
 function App() {
+  const propiedades = {
+    operacion: "+",
+    numero1: 1,
+    numero2: 2,
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Calculadora calculo={propiedades} />
     </div>
   );
 }
