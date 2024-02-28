@@ -6,19 +6,19 @@ function Calculadora() {
   const [num2, setNum2] = useState(0);
   const [resultado, setResultado] = useState(0);
 
-  const handleSumar = () => {
+  const operacionSuma = () => {
     setResultado(num1 + num2);
   };
 
-  const handleRestar = () => {
+  const operacionResta = () => {
     setResultado(num1 - num2);
   };
 
-  const handleMultiplicar = () => {
+  const operacionMultiplicar = () => {
     setResultado(num1 * num2);
   };
 
-  const handleDividir = () => {
+  const operacionDividir = () => {
     if (num2 !== 0) {
       setResultado(num1 / num2);
     } else {
@@ -39,10 +39,10 @@ function Calculadora() {
         onChange={(e) => setNum2(parseFloat(e.target.value))}
       />
       <br />
-      <button onClick={handleSumar}>+</button>
-      <button onClick={handleRestar}>-</button>
-      <button onClick={handleMultiplicar}>*</button>
-      <button onClick={handleDividir}>/</button>
+      <button onClick={operacionSuma}>+</button>
+      <button onClick={operacionResta}>-</button>
+      <button onClick={operacionMultiplicar}>*</button>
+      <button onClick={operacionDividir}>/</button>
       <br />
       <p>Resultado: {resultado}</p>
     </div>
