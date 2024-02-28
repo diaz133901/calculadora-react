@@ -1,4 +1,3 @@
-import "./Calculadora.css";
 import React, { useState } from "react";
 
 function Calculadora() {
