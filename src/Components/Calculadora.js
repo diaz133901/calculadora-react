@@ -26,24 +26,49 @@ function Calculadora() {
   };
 
   return (
-    <div>
-      <input
-        type="number"
-        value={num1}
-        onChange={(e) => setNum1(parseFloat(e.target.value))}
-      />
-      <input
-        type="number"
-        value={num2}
-        onChange={(e) => setNum2(parseFloat(e.target.value))}
-      />
-      <br />
-      <button onClick={operacionSuma}>+</button>
-      <button onClick={operacionResta}>-</button>
-      <button onClick={operacionMultiplicar}>*</button>
-      <button onClick={operacionDividir}>/</button>
-      <br />
-      <p>Resultado: {resultado}</p>
+    <div className="container">
+      <div className="row mt-5">
+        <div className="col-sm-3">
+          <input
+            type="number"
+            className="form-control"
+            value={num1}
+            onChange={(e) => setNum1(parseFloat(e.target.value))}
+          />
+        </div>
+        <div className="col-sm-3">
+          <input
+            type="number"
+            className="form-control"
+            value={num2}
+            onChange={(e) => setNum2(parseFloat(e.target.value))}
+          />
+        </div>
+      </div>
+      <div className="row mt-3">
+        <div className="col-sm-3">
+          <button className="btn btn-primary mx-2" onClick={operacionSuma}>
+            +
+          </button>
+          <button className="btn btn-primary mx-2" onClick={operacionResta}>
+            -
+          </button>
+          <button
+            className="btn btn-primary mx-2"
+            onClick={operacionMultiplicar}
+          >
+            *
+          </button>
+          <button className="btn btn-primary mx-2" onClick={operacionDividir}>
+            /
+          </button>
+        </div>
+      </div>
+      <div className="row mt-3">
+        <div className="col-sm-3">
+          <p className="text-primary">Resultado: {resultado}</p>
+        </div>
+      </div>
     </div>
   );
 }
